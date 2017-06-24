@@ -9,7 +9,7 @@ var firstName = "";
 		var list = "";
 		var amount = "";
 		
-		$('.set-amount').autoGrow(0);
+		// $('.set-amount').autoGrow(0);
 		
 		
 		//Set & Highlight Donation Amount

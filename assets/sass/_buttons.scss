@@ -1,10 +1,10 @@
 
 .learn-more-button {
 	border: solid #efefef 1px;
-	width: 30%;
+	width: 200px;
 	text-align: center;
 	padding: 10px;
-	margin: 50px 35%;
+	margin: 15px auto 15px auto;
 	color:#efefef;
 	transition:all 0.3s;
 	cursor:pointer;
@@ -13,13 +13,8 @@
 	  	background-color:#ED861D;
 	}
 
-	@include bp-mobile {
-		width:40%;
-		margin:0 auto;
-	}
-
-	@include bp-laptop {
-		width:20%;
+	@include bp-tablet {
+		font-size: 1.3em;
 	}
 
 }

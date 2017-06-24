@@ -9,18 +9,17 @@
 }
 
 .donation-container {
-  height: 1000px;
+  height: 450px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 12px;
   text-transform: uppercase;
-  margin-top: 30px;
-  float: right;
-  width: 49%;
+  width: 97%;
+  margin: 30px auto 15px auto;
+  max-width: 500px;
 }
 
 .donation-box {
-  width: 390px;
   height: 386px;
   background-color: #F5F5F5;
   border-top-left-radius: 4px;
@@ -311,7 +310,7 @@ video {
 html, body {
   width: 100%;
   height: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Monserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -326,6 +325,7 @@ section {
 
 #logo-container {
   width: 20%;
+  max-width: 190px;
   overflow: hidden;
   padding: 20px;
   display: inline-block;
@@ -351,81 +351,60 @@ section {
   }
 }
 
-.copy-container-right {
-  width: 60%;
-  margin: 15px auto;
-  float: right;
+.wrap {
+  min-height: 100vh;
+  height: auto;
+  margin: 0 auto -60px;
 }
 
-@media only screen and (max-width: 720px) {
-  .copy-container-right {
-    width: 80%;
-    margin: 15px 10%;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .copy-container-right {
-    width: 50%;
-    margin: 15px 5%;
-  }
-}
-
+.copy-container-right,
 .copy-container-left {
-  width: 60%;
-  margin: 50px;
+  width: 97%;
+  max-width: 640px;
+  margin: 75px auto 0 auto;
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (min-width: 1024px) {
+  .copy-container-right,
   .copy-container-left {
     width: 80%;
-    margin: 15px 10%;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .copy-container-left {
-    width: 50%;
-    margin: 15px 5%;
   }
 }
 
 h1, p {
-  font-size: 3.5em;
+  font-size: 1.8em;
   padding: 20px;
   color: #efefef;
   text-shadow: 0 0 3px gray;
-  font-weight: 300;
+  font-weight: 400;
+  text-align: center;
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (min-width: 768px) {
   h1, p {
-    font-size: 2em;
-    padding: 20px;
-    width: 100%;
-    text-align: center;
+    font-size: 3.5em;
   }
 }
 
 p {
-  font-size: 1.5em;
-  line-height: 1.3em;
-  font-weight: 300;
+  font-size: 1em;
+  line-height: 1.5em;
+  font-weight: 400;
+  text-align: center;
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (min-width: 768px) {
   p {
-    font-size: 1.15em;
-    text-align: center;
+    font-size: 1.5em;
   }
 }
 
 .learn-more-button {
   border: solid #efefef 1px;
-  width: 30%;
+  width: 200px;
   text-align: center;
   padding: 10px;
-  margin: 50px 35%;
+  margin: 15px auto 15px auto;
   color: #efefef;
   transition: all 0.3s;
   cursor: pointer;
@@ -435,47 +414,39 @@ p {
   background-color: #ED861D;
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (min-width: 768px) {
   .learn-more-button {
-    width: 40%;
-    margin: 0 auto;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .learn-more-button {
-    width: 20%;
+    font-size: 1.3em;
   }
 }
 
 .jet-cluster {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 0;
-  width: 10%;
+  width: 120px;
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
           transform: rotate(90deg);
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (min-width: 1024px) {
   .jet-cluster {
-    width: 30%;
-    top: 30%;
+    top: 250px;
   }
 }
 
 .the-footer {
   width: 100%;
-  height: auto;
-  background-color: black;
+  height: 75px;
+  background-color: #191919;
 }
 
 .the-footer p {
   font-weight: 300;
   font-size: 1em;
   text-align: center;
-  padding: 15px;
+  padding: 20px;
   color: #efefef;
   text-shadow: none;
 }

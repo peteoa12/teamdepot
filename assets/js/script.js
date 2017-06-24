@@ -1,4 +1,4 @@
-$(document).ready(function(){
+
 
 	// places, people!
 	var hiddenOnLoad = [
@@ -138,140 +138,38 @@ $(document).ready(function(){
 			},{
 				alpha:1,
 			});
+
+			timelineFour.fromTo(".donation-container", 0.3, {
+				scale:0,
+				y:200, 
+				alpha:0
+			},{
+				scale:1,
+				y:8,
+				alpha:1,
+			});
 			
 		}
 	}, {
 		offset:"25%"
-	});//END WAYPOINT 3	
+	});
+
+
 
 // ScrollMagic Events
+
 	var controller = new ScrollMagic.Controller();
 
 			var jetsTween = TweenMax.to("#jets",10,{left:2000})
 
 
-			var tweenSaw = TweenMax.fromTo("#saw", 0.1,
-							{x: -150},
-							{x: -170,yoyo:true,repeat:-1}
-			);
-
-			var tweenHammer = TweenMax.fromTo("#jack-hammer",  0.1,
-							{y:0},
-							{y: 5, repeat:-1}
-			);
-
-
-			var tweenTruckOne = TweenMax.fromTo("#truck-one",  7,
-							{left:-100},
-							{left:1920, repeat:-1}
-			);
-
-			var tweenTruckTwo = TweenMax.fromTo("#truck-two",  6.5, {left:-100}, {left:1920, repeat:-1});
-
-			var tweenTruckThree = TweenMax.fromTo("#truck-three",  6,
-							{left:-100},
-							{left:1920, repeat:-1}
-			);
-
-			var tweenTruckFour = TweenMax.fromTo("#truck-four",  9,
-							{left:-100},
-							{left:1920, repeat:-1}
-			);
-
-			var tweenTruckFive = TweenMax.fromTo("#truck-five",  10,
-							{left:-100},
-							{left:1920, repeat:-1}
-			);
-
-			var tweenTruckSix = TweenMax.fromTo("#truck-six",  8,
-							{left:-100},
-							{left:1920, repeat:-1}
-			);
-
-			var tweenPlaneOne = TweenMax.fromTo("#plane-one",  8,
-							{x:0,y:0},
-							{x:200,y:-500,rotation:20,scale:3,opacity:0}
-			);
-
-			var tweenPlaneTwo = TweenMax.fromTo("#plane-two",  8,
-							{x:0,y:0},
-							{x:-200,y:-500,rotation:-20,scale:3,opacity:0}
-			);
-
-// ScrollMagic scenes
-
 			var jetsScene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration:500, offset: 50})
 					
 					.setTween(jetsTween) // trigger a TweenMax.to tween
-					.addIndicators({name: "0 (duration: 200)"}) // add indicators (requires plugin)
+					// .addIndicators({name: "0 (duration: 200)"}) // add indicators (requires plugin)
 					.addTo(controller);
 
-			var sceneOne = new ScrollMagic.Scene({triggerElement: "#trigger2"})
-					
-					.setTween(tweenSaw) // trigger a TweenMax.to tween
-					.addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
-					.addTo(controller);
 
-			var sceneTwo = new ScrollMagic.Scene({triggerElement: "#trigger2"})
-					
-					.setTween(tweenHammer) // trigger a TweenMax.to tween
-					.addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
-					.addTo(controller);
-
-			var sceneTruckOne = new ScrollMagic.Scene({triggerElement: "#trigger3", offset: -60})
-					
-					.setTween(tweenTruckOne) // trigger a TweenMax.to tween
-					.addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
-					.addTo(controller);
-
-			var sceneTruckTwo = new ScrollMagic.Scene({triggerElement: "#trigger3", offset:-50})
-					
-					.setTween(tweenTruckTwo) // trigger a TweenMax.to tween
-					.addIndicators({name: "2 (duration: 0)"}) // add indicators (requires plugin)
-					.addTo(controller);
-
-			var sceneTruckThree = new ScrollMagic.Scene({triggerElement: "#trigger3", offset:-40})
-					
-					.setTween(tweenTruckThree) // trigger a TweenMax.to tween
-					.addIndicators({name: "3 (duration: 0)"}) // add indicators (requires plugin)
-					.addTo(controller);
-						
-			var sceneTruckOne = new ScrollMagic.Scene({triggerElement: "#trigger3", offset: -30})
-					
-					.setTween(tweenTruckOne) // trigger a TweenMax.to tween
-					.addIndicators({name: "4 (duration: 0)"}) // add indicators (requires plugin)
-					.addTo(controller);
-
-			var sceneTruckFour = new ScrollMagic.Scene({triggerElement: "#trigger3", offset:-20})
-					
-					.setTween(tweenTruckFour) // trigger a TweenMax.to tween
-					.addIndicators({name: "5 (duration: 0)"}) // add indicators (requires plugin)
-					.addTo(controller);
-
-			var sceneTruckFive = new ScrollMagic.Scene({triggerElement: "#trigger3", offset:-10})
-					
-					.setTween(tweenTruckFive) // trigger a TweenMax.to tween
-					.addIndicators({name: "6 (duration: 0)"}) // add indicators (requires plugin)
-					.addTo(controller);
-
-			var sceneTruckSix = new ScrollMagic.Scene({triggerElement: "#trigger3", offset:-20})
-					
-					.setTween(tweenTruckSix) // trigger a TweenMax.to tween
-					.addIndicators({name: "7 (duration: 0)"}) // add indicators (requires plugin)
-					.addTo(controller);
-
-			var scenePlaneOne = new ScrollMagic.Scene({triggerElement: "#trigger3", offset:-20})
-					
-					.setTween(tweenPlaneOne) // trigger a TweenMax.to tween
-					.addIndicators({name: "8 (duration:0)"}) // add indicators (requires plugin)
-					.addTo(controller);
-
-			var scenePlaneTwo = new ScrollMagic.Scene({triggerElement: "#trigger3", offset:-20})
-					
-					.setTween(tweenPlaneTwo) // trigger a TweenMax.to tween
-					.addIndicators({name: "8 (duration: 0)"}) // add indicators (requires plugin)
-					.addTo(controller);
-});
 
 
 

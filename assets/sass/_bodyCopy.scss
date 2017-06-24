@@ -1,61 +1,36 @@
 
-.copy-container-right {
-	width: 60%;
-    margin: 15px auto;
-    float: right;
-
-	@include bp-mobile {
-		width:80%;
-		margin:15px 10%;
-	}
-
-	@include bp-tablet {
-		width:50%;
-		margin:15px 5%;
-	}
-}
-
+.copy-container-right,
 .copy-container-left {
-		
-	width: 60%;
-	margin:50px;
+	width: 97%;
+	max-width: 640px;
+    margin: 75px auto 0 auto;
 
-	@include bp-mobile {
-		width:80%;
-		margin:15px 10%;
-	}
-
-
-	@include bp-tablet {
-		width:50%;
-		margin:15px 5%;
-	}
+    @include bp-laptop {
+    	width:80%;
+    }
 }
 
 h1 {
-	font-size: 3.5em;
+	font-size: 1.8em;
 	padding:20px;
 	color:$primary-color;
 	text-shadow: 0 0 3px gray;
-	font-weight: 300;
+	font-weight: 400;
+	text-align:center;
 
-	@include bp-mobile {
-		font-size: 2em;
-		padding:20px;
-		width:100%;
-		text-align:center;
+	@include bp-tablet {
+		font-size: 3.5em;
 	}
-
 }
 
 p {
 	@extend h1;
-	font-size: 1.5em;
-	line-height: 1.3em;
-	font-weight: 300;
+	font-size: 1em;
+	line-height: 1.5em;
+	font-weight: 400;
+	text-align:center;
 
-	@include bp-mobile {
-		font-size: 1.15em;
-		text-align:center;
+	@include bp-tablet {
+		font-size: 1.5em;
 	}
 }

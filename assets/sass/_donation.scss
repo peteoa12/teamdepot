@@ -2,18 +2,17 @@
 // Donation form
 
 .donation-container {
-	height: 1000px;
+	height: 450px;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 500;
 	font-size: 12px;
 	text-transform: uppercase;
-	margin-top: 30px;
-	float: right;
-	width: 49%;
+	width: 97%;
+	margin: 30px auto 15px auto;
+	max-width: 500px;
 }
 
 .donation-box {
-	width: 390px;
 	height: 386px;
 	background-color: #F5F5F5;
 	border-top-left-radius: 4px;

@@ -1,13 +1,12 @@
 
 .jet-cluster {
 	position:absolute;
-	top:50%;
+	top:30%;
 	left:0;
-	width:10%;
+	width:120px;
 	transform:rotate(90deg);
 
-	@include bp-mobile{
-		width:30%;
-		top:30%;
+	@include bp-laptop {
+		top: 250px;
 	}
 }
