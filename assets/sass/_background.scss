@@ -1,0 +1,40 @@
+
+//BACKGROUND IMAGES<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+
+#veteran {
+	background-image: 
+	url(../img/army-front.png),
+	url(../img/army-back.jpg);
+	background-size: cover,cover;
+	background-repeat: no-repeat, no-repeat;
+	background-position: center, center;
+	background-attachment: fixed, scroll;
+	
+}
+
+#construction {
+	background-image: url(../img/construction.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	overflow:hidden;
+}
+
+#disaster-relief {
+	background-image: url(../img/hurricane.jpeg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	overflow:hidden;
+}
+
+video {
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	min-width:100%;
+	min-height:101%;
+	z-index:-1;
+}

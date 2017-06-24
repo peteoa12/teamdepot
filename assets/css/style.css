@@ -1,0 +1,483 @@
+* {
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.donation-container {
+  height: 1000px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-top: 30px;
+  float: right;
+  width: 49%;
+}
+
+.donation-box {
+  width: 390px;
+  height: 386px;
+  background-color: #F5F5F5;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.15s ease-out;
+}
+
+.donation-box .title {
+  background-color: #F58426;
+  width: 100%;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  color: white;
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: 15px;
+}
+
+.donation-box .donate-button {
+  background-color: #F58426;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: 18px;
+  bottom: 0px;
+  position: absolute;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.donation-box .fields {
+  width: 59%;
+  display: block;
+  position: absolute;
+  top: 60px;
+  left: 15px;
+}
+
+.donation-box .fields input {
+  width: 90%;
+  font-size: 17px;
+  padding: 10px;
+  border-radius: 4px;
+  border-width: 0px;
+  color: #5C5C5C;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  margin-bottom: 10px;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-input-placeholder {
+  color: #cdcdcd;
+  font-size: 15px;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #cdcdcd;
+  font-size: 15px;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #cdcdcd;
+  font-size: 15px;
+}
+
+:-ms-input-placeholder {
+  color: #cdcdcd;
+  font-size: 15px;
+}
+
+.donation-box .amount {
+  width: 30%;
+  display: block;
+  position: absolute;
+  top: 60px;
+  right: 15px;
+}
+
+.donation-box .amount .button {
+  width: 100%;
+  background-color: gray;
+  margin-bottom: 10px;
+  text-align: center;
+  color: white;
+  padding: 15px 0px 15px 0px;
+  border-radius: 4px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 200ms background-color;
+}
+
+.donation-box .amount .button:hover {
+  background-color: #393939;
+}
+
+.donation-box .amount .button.selected {
+  background-color: #393939;
+}
+
+.donation-box .amount .button input {
+  min-width: 34px;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  font-stretch: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  border-bottom: 2px dashed white;
+  -webkit-font-smoothing: antialiased;
+  transition: all 0.15s ease-out;
+}
+
+.set-amount {
+  max-width: 96px;
+}
+
+.switch {
+  position: absolute;
+  top: 190px;
+  left: 15px;
+  margin: 20px auto;
+  height: 26px;
+  width: 58.5%;
+  background: white;
+  border-radius: 3px;
+}
+
+.switch-label {
+  position: relative;
+  z-index: 2;
+  float: left;
+  width: 49%;
+  line-height: 26px;
+  font-size: 11px;
+  color: #5C5C5C;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.switch-label:active {
+  font-weight: bold;
+}
+
+.switch-label-off {
+  padding-left: 2px;
+}
+
+.switch-label-on {
+  padding-right: 2px;
+}
+
+.switch-input {
+  display: none;
+}
+
+.switch-input:checked + .switch-label {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.65);
+  transition: 0.15s ease-out;
+}
+
+.switch-input:checked + .switch-label-on ~ .switch-selection {
+  left: 114px;
+}
+
+.switch-selection {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 2px;
+  left: 2px;
+  width: 49%;
+  height: 22px;
+  background: #65bd63;
+  border-radius: 3px;
+  background-color: #F58426;
+  transition: left 0.15s ease-out;
+}
+
+.checkboxes {
+  position: absolute;
+  top: 242px;
+  left: 13px;
+}
+
+.checkboxes label {
+  position: relative;
+  top: -8px;
+  font-size: 13px;
+  color: gray;
+}
+
+.checkbox {
+  -webkit-appearance: none;
+  background-color: #fafafa;
+  border: 1px solid #F58426;
+  padding: 9px;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+  outline: none;
+  transition: all 0.15s ease-out;
+}
+
+.checkbox:checked {
+  background-color: #F58426;
+  border: 1px solid #F58426;
+  color: white;
+}
+
+.checkbox:checked:after {
+  content: '\2714';
+  font-size: 14px;
+  position: absolute;
+  top: 0px;
+  left: 3px;
+  color: white;
+}
+
+.confirm {
+  display: none;
+  position: absolute;
+  top: 335px;
+  left: 15px;
+  right: 15px;
+  font-size: 16px;
+  transition: all 0.15s ease-out;
+}
+
+.confirm i {
+  font-weight: bold;
+  text-decoration: underline;
+  font-style: normal;
+}
+
+#veteran {
+  background-image: url(../img/army-front.png), url(../img/army-back.jpg);
+  background-size: cover,cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-attachment: fixed, scroll;
+}
+
+#construction {
+  background-image: url(../img/construction.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+#disaster-relief {
+  background-image: url(../img/hurricane.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 101%;
+  z-index: -1;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+section {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#logo-container {
+  width: 20%;
+  overflow: hidden;
+  padding: 20px;
+  display: inline-block;
+  margin: 0 40%;
+  z-index: 999;
+}
+
+#logo-container #logo {
+  width: 100%;
+}
+
+@media only screen and (max-width: 720px) {
+  #logo-container {
+    width: 40%;
+    margin: 0 30%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #logo-container {
+    width: 20%;
+    margin: 0 auto;
+  }
+}
+
+.copy-container-right {
+  width: 60%;
+  margin: 15px auto;
+  float: right;
+}
+
+@media only screen and (max-width: 720px) {
+  .copy-container-right {
+    width: 80%;
+    margin: 15px 10%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .copy-container-right {
+    width: 50%;
+    margin: 15px 5%;
+  }
+}
+
+.copy-container-left {
+  width: 60%;
+  margin: 50px;
+}
+
+@media only screen and (max-width: 720px) {
+  .copy-container-left {
+    width: 80%;
+    margin: 15px 10%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .copy-container-left {
+    width: 50%;
+    margin: 15px 5%;
+  }
+}
+
+h1, p {
+  font-size: 3.5em;
+  padding: 20px;
+  color: #efefef;
+  text-shadow: 0 0 3px gray;
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 720px) {
+  h1, p {
+    font-size: 2em;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+p {
+  font-size: 1.5em;
+  line-height: 1.3em;
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 720px) {
+  p {
+    font-size: 1.15em;
+    text-align: center;
+  }
+}
+
+.learn-more-button {
+  border: solid #efefef 1px;
+  width: 30%;
+  text-align: center;
+  padding: 10px;
+  margin: 50px 35%;
+  color: #efefef;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.learn-more-button:hover {
+  background-color: #ED861D;
+}
+
+@media only screen and (max-width: 720px) {
+  .learn-more-button {
+    width: 40%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .learn-more-button {
+    width: 20%;
+  }
+}
+
+.jet-cluster {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 10%;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+@media only screen and (max-width: 720px) {
+  .jet-cluster {
+    width: 30%;
+    top: 30%;
+  }
+}
+
+.the-footer {
+  width: 100%;
+  height: auto;
+  background-color: black;
+}
+
+.the-footer p {
+  font-weight: 300;
+  font-size: 1em;
+  text-align: center;
+  padding: 15px;
+  color: #efefef;
+  text-shadow: none;
+}
+
+/*# sourceMappingURL=style.css.map */

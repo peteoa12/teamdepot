@@ -1,0 +1,14 @@
+.the-footer {
+  width: 100%;
+  height: auto;
+  background-color: black;
+}
+
+.the-footer p {
+  font-weight: 300;
+  font-size: 1em;
+  text-align: center;
+  padding: 15px;
+  color: #efefef;
+  text-shadow: none;
+}

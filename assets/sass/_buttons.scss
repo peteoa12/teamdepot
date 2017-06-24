@@ -1,0 +1,25 @@
+
+.learn-more-button {
+	border: solid #efefef 1px;
+	width: 30%;
+	text-align: center;
+	padding: 10px;
+	margin: 50px 35%;
+	color:#efefef;
+	transition:all 0.3s;
+	cursor:pointer;
+
+	&:hover {
+	  	background-color:#ED861D;
+	}
+
+	@include bp-mobile {
+		width:40%;
+		margin:0 auto;
+	}
+
+	@include bp-laptop {
+		width:20%;
+	}
+
+}
